@@ -36,7 +36,7 @@ const GoalProgressPieChart: React.FC<GoalProgressPieChartProps> = ({ goalPrice, 
                 <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
               ))}
               <Label
-                value={`${(progress * 100).toFixed(1)}%`}
+                value={`${(progress * 100).toFixed(0)}%`}
                 position="center"
                 fill="white"
                 style={{ fontSize: '24px', fontWeight: 'bold' }}
@@ -49,7 +49,7 @@ const GoalProgressPieChart: React.FC<GoalProgressPieChartProps> = ({ goalPrice, 
             Current: ${currentPrice.toFixed(2)} / Goal: ${goalPrice.toFixed(2)}
           </p>
           <p className="text-xl font-semibold mt-2">
-            {(progress * 100).toFixed(1)}% Complete
+            {(progress * 100).toFixed(0)}% Complete
           </p>
         </div>
       </div>
